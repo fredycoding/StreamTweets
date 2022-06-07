@@ -36,9 +36,8 @@ class IDPrinter(tweepy.Stream):
 
 
 
-        if self.contador <= 10:      
-
-
+        if self.contador <= 100: 
+          
             #print(status)
             usuario.append(status.user.screen_name)
             nombre.append(status.user.name)
@@ -58,6 +57,7 @@ class IDPrinter(tweepy.Stream):
                 ubicacion.append('No especificado')    
 
             print(text)
+            # Descomentar para visualizar en consola resultados
             """print(status.id)
             print(text)
             print(status.created_at)   
@@ -69,7 +69,7 @@ class IDPrinter(tweepy.Stream):
             print("Contador: ", self.contador)    
             self.contador += 1 
 
-        if self.contador == 10:
+        if self.contador == 100:
             print("Contador: ", self.contador)
             self.disconnect()
             df['Usuario'] = usuario
@@ -87,4 +87,4 @@ class IDPrinter(tweepy.Stream):
 printer = IDPrinter( clave_usuario, secreto_usuario, token_acceso, token_acceso_secreto)
 
 # Filter realtime Tweets by keyword
-printer.filter(track=["idmji"])
+printer.filter(track=["Colombia"])
