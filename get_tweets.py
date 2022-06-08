@@ -1,5 +1,6 @@
 ### En este ejemplo se muestra como se puede utilizar el API de Twitter para recibir tweets en tiempo real.
 ### Leemos los 100 primeros tweets en streaming
+### Realizado por Fredy Diaz
 
 import tweepy
 import pandas as pd
